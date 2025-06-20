@@ -29,19 +29,9 @@
     filter: invert(1);
     width: 25px;
 }
-.card-container{
-    padding: 0 12px;
-}
-.card-container .cards{
- width: 270px;
-  
-}
+
+
 .card-container .cards >img{
+     width: 100%;
     object-fit: contain;
-    height: 100%;
-    width: 100%;
-}
-.card-container{
-    padding: 20px;
-  
 }

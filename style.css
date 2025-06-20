@@ -4,6 +4,8 @@
     padding: 10px;
     box-sizing: border-box;
     height: 100vh;
+    z-index: 4;
+    position: relative;
     
     
    
@@ -45,15 +47,7 @@ ul li span{
       border-radius: 10px;
       overflow-y: scroll;
       
- .cards {
-    width: 200px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #252525;
-    position: relative;
-    transition: all .9s;
-}    
-
+ 
 }
 .container{
     gap: 5px;
@@ -80,6 +74,10 @@ ul li span{
     padding: 12px;
     background-color:#1f1f1f ;
 }
+.hamburgerr{
+    display: none;
+}
+
 .Playlist{
     padding: 12px;
 }
@@ -126,12 +124,22 @@ ul li span{
 }
 .buttonr{
     position: absolute;
-    top: 250px;
+    top: 184px;
         right: 22px;
 
 }
 .cards{
+    
+    margin: 5px;
+    
+    width: 200px;
+    padding: 13px;
+    height: max-content;
+    border-radius: 5px;
+    background-color: #252525;
     position: relative;
+    transition: all .9s;
+
     
 }
 .buttonr {
@@ -147,15 +155,19 @@ ul li span{
 .card-container{
    
     display: flex;
-    align-items: center;
-    gap: 20px;
+    gap: 2px;
     flex-wrap: wrap;
-    margin: 0 34px;
-   max-height: 60vh;
+    margin: 0 12px;
+    margin-top: 12px;
+   height: 72vh;
+  
     overflow-y: scroll;
-   
+
+
     
 }
+
+
 .playbar{
     font-size: small;
 }
@@ -191,17 +203,17 @@ ul li span{
   background: #888; /* Lighter on hover */
 }
 .seekbar{
-    height: 3px;
+    height: 1px;
     border: 2px solid black;
     position: absolute;
     width: 98%;
-    bottom: 0;
+    bottom: 0px;
     background-color:black;
 }
 .circle{
     position: absolute;
     top: -10px;
-    left: 0;
+    left: -5px;
     height: 18px;
     width: 19px;
     border-radius: 50%;
@@ -233,8 +245,9 @@ ul li span{
 }
 .songInfo{
     width: 250px;
-    height: 30px;
-    font-size: small;
+    height: 40px;
+   
+    
 }
 .home li{
     display: flex;
@@ -312,6 +325,14 @@ ul li span{
     
     
 }
+.cross{
+        position: absolute;
+    top: 16px;
+    filter: invert(1);
+    right: 16px;
+    display: none;
+}
+
 
 .footer {
     display: flex;
@@ -321,7 +342,7 @@ ul li span{
     flex-wrap: wrap;
  
     word-break: break-all;
-   z-index: 1;
+   z-index: 3;
     
     background-color:#1f1f1f;
     
@@ -351,7 +372,12 @@ ul li span{
   .right{
     position: absolute;
     transform: translateX(-120%);
-    margin-top: 0;
+    
+    
+    height: 100vh;
+    
+  
+    padding: 0;
   }
   .left{
     width: 100vw;
@@ -362,11 +388,21 @@ ul li span{
   }
   .playbar{
     width: 95%;
+    gap: 12px;
   }
-  
- 
+  .hamburgerr{
+    display: block;
+  }
+  .tabs{
+    display: flex;
+    gap: 5px;
+  }
+.cross{
+    display: block;
+}
   
 }
+
 @media(max-width: 943px) {
     .playbar{
         flex-direction: column;
@@ -377,7 +413,7 @@ ul li span{
         padding: 50px ;
     
         justify-content: center;
-        gap: 5px;
+   
         
     }
     .voldur{
@@ -386,10 +422,14 @@ ul li span{
     }
     .songInfo{
         width: max-content;
+         word-break: break-all;
       
     }
     .cards{
         width: 50vw;
+    }
+    .buttonr{
+        top: 313px;
     }
 }
 .seekbar{
@@ -408,26 +448,19 @@ ul li span{
     justify-content: center;
     gap: 5px;
 }
-@media(max-width: 1024px){
-    .card-container{
-        margin: 0;
-    }
-}
+
 @media(max-width: 981px){
     .card-container{
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        margin:0;
-        padding: 0;
+      
+    }
+    .buttonr{
+        top: 313px;
     }
 }
-@media(max-width: 660px){
-    .cards{
-        margin: 0;
-        padding: 0;
-    }
-}
+
 @media(max-width: 620px){
     .cards{
         width: 90vw;
@@ -438,5 +471,13 @@ ul li span{
        display: flex;
        justify-content: center;
        min-width: 250px;
+    }
+}
+@media(max-width: 1315px){
+    .cards{
+        width: 44vh;
+    }
+    .buttonr{
+        top: 313px;
     }
 }
