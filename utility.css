@@ -1,0 +1,47 @@
+.bg-black{
+    background-color: black;
+    color: white;
+
+}
+.invert{
+    filter: invert(1);
+}
+.flex{
+    display: flex;
+}
+.justify-content{
+    justify-content: space-between;
+}
+.align-item{
+    align-items: center;
+}
+.border{
+    border: 2px solid red;
+}
+.home{
+    background-color: #1f1f1f;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+.tabs img{
+    filter: invert(1);
+    width: 25px;
+}
+.card-container{
+    padding: 0 12px;
+}
+.card-container .cards{
+ width: 270px;
+  
+}
+.card-container .cards >img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+.card-container{
+    padding: 20px;
+  
+}
